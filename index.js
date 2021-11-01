@@ -1,27 +1,6 @@
-class Cliente {
-  //esses são atributos, ou propriedades (fora de classes conhecemos como variáveis)
-  nome;
-  cpf;
-}
+import { Cliente } from "./Cliente.js";
+import { ContaCorrente } from "./ContaCorrente.js";
 
-class ContaCorrente {
-  agencia;
-  // #saldo = 0; https://github.com/tc39/proposal-class-fields#private-fields
-  _saldo = 0;
-
-  sacar(valor) {
-    if(this._saldo >= valor) {
-      this._saldo -= valor;
-      return valor;
-    }
-  }
-
-  depositar(valor) {
-    if(valor <= 0) return;
-
-    this._saldo += valor;
-  }
-}
 
 //Se eu quero criar um novo cliente eu utilizo a palavra new, gerando uma instância desta classe!
 const cliente1 = new Cliente();
